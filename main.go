@@ -8,4 +8,5 @@ import (
 func main() {
 	mail.SendEmail("You should always eat meat to be healthy");
 	mail.ReceiveEmail("Arsalan Nury ",time.Now().Local());
+	mail.SendEmailToSpam("spammerr")
 }
