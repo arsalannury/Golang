@@ -1,12 +1,7 @@
 package main
 
-import (
-	"myApp/mail"
-	"time"
-)
+import "myApp/logger"
 
 func main() {
-	mail.SendEmail("You should always eat meat to be healthy");
-	mail.ReceiveEmail("Arsalan Nury ",time.Now().Local());
-	mail.SendEmailToSpam("spammerr")
+	logger.Logger(logger.Types{ERROR: "ERROR"},"The Error Has Occurd In Line 64");
 }
