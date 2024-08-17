@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"feature/users"
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello World !")
+	fmt.Println(users.NormalUsers)
+	fmt.Println(users.VipUsers)
 }
