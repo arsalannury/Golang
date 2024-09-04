@@ -23,4 +23,25 @@ func GeorgianToJalali() {
 	fmt.Scan(&enteredDay)
 
 	fmt.Println(jalaali.ToJalaali(enteredYear, enteredMonth, enteredDay))
+	fmt.Scan()
+}
+
+func JalaliToGeorgian() {
+	const askJalaliYear string = "enter the jalali year"
+	const askJalaliMonth string = "enter the jalali month"
+	const askJalaliDay string = "enter the jalali day"
+	var enteredYear, enteredDay int
+	var enteredMonth jalaali.Month
+
+	fmt.Println(askJalaliYear)
+	fmt.Scan(&enteredYear)
+
+	fmt.Println(askJalaliMonth)
+	fmt.Scan(&enteredMonth)
+
+	fmt.Println(askJalaliDay)
+	fmt.Scan(&enteredDay)
+
+	fmt.Println(jalaali.ToGregorian(enteredYear, enteredMonth, enteredDay))
+	fmt.Scan()
 }
