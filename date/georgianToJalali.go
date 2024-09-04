@@ -23,7 +23,6 @@ func GeorgianToJalali() {
 	fmt.Scan(&enteredDay)
 
 	fmt.Println(jalaali.ToJalaali(enteredYear, enteredMonth, enteredDay))
-	fmt.Scan()
 }
 
 func JalaliToGeorgian() {
@@ -43,5 +42,4 @@ func JalaliToGeorgian() {
 	fmt.Scan(&enteredDay)
 
 	fmt.Println(jalaali.ToGregorian(enteredYear, enteredMonth, enteredDay))
-	fmt.Scan()
 }
