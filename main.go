@@ -1,7 +1,7 @@
 package main
 
-import "ageCalculator/dateConverter"
+import "calculator/date"
 
 func main() {
-	dateConverter.GeorgianToJalali()
+	date.GeorgianToJalali()
 }
