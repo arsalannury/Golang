@@ -1,3 +1,3 @@
-module example.com/utils
+module example.com/essential
 
 go 1.22.2
