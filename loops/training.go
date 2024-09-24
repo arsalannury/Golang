@@ -45,3 +45,64 @@ func Multiple() {
 		}
 	}
 }
+
+func PrintStar() {
+	for i := 1; i <= 9; i++ {
+		if i == 1 {
+			fmt.Println("*")
+		}
+		if i == 2 {
+			fmt.Println("**")
+		}
+		if i == 3 {
+			fmt.Println("***")
+		}
+		if i == 4 {
+			fmt.Println("****")
+		}
+		if i == 5 {
+			fmt.Println("*****")
+		}
+		if i == 6 {
+			fmt.Println("******")
+		}
+		if i == 7 {
+			fmt.Println("*******")
+		}
+		if i == 8 {
+			fmt.Println("********")
+		}
+		if i == 9 {
+			fmt.Println("*********")
+		}
+	}
+
+	for i := 8; i <= 1; i-- {
+		if i == 8 {
+			fmt.Println("********")
+		}
+		if i == 7 {
+			fmt.Println("*******")
+		}
+		if i == 6 {
+			fmt.Println("******")
+		}
+		if i == 5 {
+			fmt.Println("*****")
+		}
+		if i == 4 {
+			fmt.Println("****")
+		}
+		if i == 3 {
+			fmt.Println("***")
+		}
+		if i == 2 {
+			fmt.Println("**")
+		}
+
+		if i == 1 {
+			fmt.Println("*")
+		}
+
+	}
+}

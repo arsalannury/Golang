@@ -17,6 +17,8 @@ func main() {
 		loops.Counter()
 	} else if program == "multiple" {
 		loops.Multiple()
+	} else if program == "stars" {
+		loops.PrintStar()
 	} else {
 		fmt.Println("the program selected is invalid")
 	}
