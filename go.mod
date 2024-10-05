@@ -1,3 +1,3 @@
-module example.com/essential
+module core
 
 go 1.22.2
