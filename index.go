@@ -1,7 +1,10 @@
 package main
 
-import "core/fibonacci"
+import (
+	"core/fibonacci"
+	"fmt"
+)
 
 func main() {
-	fibonacci.Fibonacci()
+	fmt.Print(fibonacci.Fibonacci())
 }
