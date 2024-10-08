@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c545de84-0659-4359-8925-84aff16f52c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c545de84-0659-4359-8925-84aff16f52c9" name="Changes" comment="fibonacci">
       <change beforePath="$PROJECT_DIR$/fibonacci/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/fibonacci/app.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +53,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="train" />
-    <option name="LAST_COMMIT_MESSAGE" value="train" />
+    <MESSAGE value="fibonacci" />
+    <option name="LAST_COMMIT_MESSAGE" value="fibonacci" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
