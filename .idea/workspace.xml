@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c545de84-0659-4359-8925-84aff16f52c9" name="Changes" comment="fibonacci">
-      <change afterPath="$PROJECT_DIR$/multiple/app.go" afterDir="false" />
+    <list default="true" id="c545de84-0659-4359-8925-84aff16f52c9" name="Changes" comment="MultiplesThreeAndFive">
+      <change afterPath="$PROJECT_DIR$/factor/largestFactor.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/index.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="train" />
     <MESSAGE value="fibonacci" />
-    <option name="LAST_COMMIT_MESSAGE" value="fibonacci" />
+    <MESSAGE value="MultiplesThreeAndFive" />
+    <option name="LAST_COMMIT_MESSAGE" value="MultiplesThreeAndFive" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

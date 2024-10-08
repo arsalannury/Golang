@@ -1,6 +1,7 @@
 package main
 
 import (
+	"core/factor"
 	"core/fibonacci"
 	"core/multiple"
 	"fmt"
@@ -13,6 +14,7 @@ func main() {
 	fmt.Println("------------------------------------")
 	fmt.Println("1: fibonacci")
 	fmt.Println("2: multiple of three and five")
+	fmt.Println("3: largest factor")
 	fmt.Println("------------------------------------")
 	fmt.Print("run: ")
 	fmt.Scan(&programSelected)
@@ -21,6 +23,8 @@ func main() {
 		fmt.Print(fibonacci.Fibonacci())
 	} else if programSelected == 2 {
 		fmt.Print(multiple.MultiplesThreeAndFive())
+	} else if programSelected == 3 {
+		fmt.Println(factor.LargestFactor())
 	} else {
 		fmt.Println("invalid Algorithm")
 	}
