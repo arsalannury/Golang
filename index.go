@@ -1,14 +1,10 @@
 package main
 
-import (
-	"core/factor"
-	"core/fibonacci"
-	"core/multiple"
-	"fmt"
-)
+import "core/pointers"
 
 func main() {
-	var programSelected int
+	pointers.Pointer()
+	/*var programSelected int
 
 	fmt.Println("Please select an algorithm")
 	fmt.Println("------------------------------------")
@@ -27,5 +23,5 @@ func main() {
 		fmt.Println(factor.LargestFactor())
 	} else {
 		fmt.Println("invalid Algorithm")
-	}
+	}*/
 }
