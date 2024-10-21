@@ -1,9 +1,10 @@
 package main
 
-import "core/pointers"
+import "core/generator"
 
 func main() {
-	pointers.Pointer()
+	generator.Generator()
+	//pointers.Pointer()
 	/*var programSelected int
 
 	fmt.Println("Please select an algorithm")
