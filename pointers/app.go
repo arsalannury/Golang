@@ -2,21 +2,27 @@ package pointers
 
 import "fmt"
 
-/*func zero(x *int) {
-	*x = 0
-}
-func main() {
-	x := 5
-	zero(&x)
-	fmt.Println(x) // x is still 5
-}*/
-
 func Pointer() {
-	var initial int16 = 1000
-	fmt.Println(&initial)
-	logger(&initial)
+	var years [3]int16 = [3]int16{1400, 1401, 1402}
+
+	yearsLogger(&years)
 }
 
-func logger(initial *int16) {
-	fmt.Println(initial)
+func yearsLogger(years *[3]int16) {
+	for index := 0; index < len(*years); index++ {
+		fmt.Println(years[index], index)
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+func Addresses() {
+	var text string = "Text String"
+	var pointText *string = &text
+	fmt.Println(pointText, "pointText")
+	address(pointText)
+}
+
+func address(pointText *string) {
+	fmt.Println(pointText)
 }
