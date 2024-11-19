@@ -1,36 +1,32 @@
 package main
 
-import (
-	"core/factor"
-	"core/fibonacci"
-	"core/multiple"
-	"core/palindrome"
-	"fmt"
-)
+import "core/training"
 
 func main() {
 
-	var programSelected int
+	training.Training()
 
-	fmt.Println("Please select an algorithm")
-	fmt.Println("------------------------------------")
-	fmt.Println("1: fibonacci")
-	fmt.Println("2: multiple of three and five")
-	fmt.Println("3: largest factor")
-	fmt.Println("4: palindrome")
-	fmt.Println("------------------------------------")
-	fmt.Print("run: ")
-	fmt.Scan(&programSelected)
+	/*	var programSelected int
 
-	if programSelected == 1 {
-		fmt.Print(fibonacci.Fibonacci())
-	} else if programSelected == 2 {
-		fmt.Print(multiple.MultiplesThreeAndFive())
-	} else if programSelected == 3 {
-		fmt.Println(factor.LargestFactor())
-	} else if programSelected == 4 {
-		fmt.Println(palindrome.Palindrome())
-	} else {
-		fmt.Println("invalid Algorithm")
-	}
+		fmt.Println("Please select an algorithm")
+		fmt.Println("------------------------------------")
+		fmt.Println("1: fibonacci")
+		fmt.Println("2: multiple of three and five")
+		fmt.Println("3: largest factor")
+		fmt.Println("4: palindrome")
+		fmt.Println("------------------------------------")
+		fmt.Print("run: ")
+		fmt.Scan(&programSelected)
+
+		if programSelected == 1 {
+			fmt.Print(fibonacci.Fibonacci())
+		} else if programSelected == 2 {
+			fmt.Print(multiple.MultiplesThreeAndFive())
+		} else if programSelected == 3 {
+			fmt.Println(factor.LargestFactor())
+		} else if programSelected == 4 {
+			fmt.Println(palindrome.Palindrome())
+		} else {
+			fmt.Println("invalid Algorithm")
+		}*/
 }
