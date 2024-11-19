@@ -1,10 +1,12 @@
 package main
 
-import "core/training"
+import (
+	"core/smallestMultiple"
+)
 
 func main() {
 
-	training.Training()
+	smallestMultiple.SmallestMultiple()
 
 	/*	var programSelected int
 
