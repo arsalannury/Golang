@@ -1,13 +1,11 @@
 package main
 
-import (
-	"core/smallestMultiple"
-)
+import "core/training"
 
 func main() {
 
-	smallestMultiple.SmallestMultiple()
-
+	//smallestMultiple.SmallestMultiple()
+	training.Training()
 	/*	var programSelected int
 
 		fmt.Println("Please select an algorithm")

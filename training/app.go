@@ -1,52 +1,71 @@
 package training
 
 import (
+	"errors"
 	"fmt"
 	"time"
 )
 
-type Post struct {
-	createdAt time.Time
-	author    string
-	photos    struct {
-		photoName    string
-		photoContent []byte
-	}
-	content string
+type province struct {
+	name     string
+	location [2]uint32
 }
 
-type Status struct {
-	lastSee time.Time
-	status  string
+type users struct {
+	fullName      string
+	fatherName    string
+	birthProvince province
+	birthDate     time.Time
+	nationalCode  string
+}
+
+func (u users) getUserByProperty(property string) (error, string, users) {
+	var propertyToLog string
+	var all users
+
+	switch property {
+	case "fullName":
+		propertyToLog = "fullName"
+	case "fatherName":
+		propertyToLog = "fatherName"
+	case "birthProvince":
+		propertyToLog = "birthProvince"
+	case "birthDate":
+		propertyToLog = "birthDate"
+	case "nationalCode":
+		propertyToLog = "nationalCode"
+	case "all":
+		all = u
+	default:
+		propertyToLog = ""
+		all = users{}
+		return errors.New("property passed is not valid"), propertyToLog, all
+	}
+	return nil, propertyToLog, all
+}
+
+func userActions() {
+	var admin users = users{
+		fullName:   "Arsalan Nury",
+		fatherName: "Mohammad",
+		birthProvince: province{
+			name:     "Tehran",
+			location: [2]uint32{435543545, 3232333232},
+		},
+		birthDate:    time.Date(1999, 9, 6, 12, 30, 0, 0, time.Local),
+		nationalCode: "0022143503",
+	}
+
+	var err, property, all = users.getUserByProperty(admin, "f")
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(property, "property")
+	fmt.Println(all, "all")
 }
 
 func Training() {
-	var firstUserPost Post = Post{
-		createdAt: time.Now(),
-		author:    "Arsalan Nury",
-		content:   "This situation is verification specification dagholination",
-		photos: struct {
-			photoName    string
-			photoContent []byte
-		}{
-			photoName:    "our last week trip",
-			photoContent: []byte("ghgyutyughjghg"),
-		},
-	}
-
-	var userStatus Status = Status{
-		lastSee: time.Date(2023, time.January, 2, 12, 25, 10, 1, time.UTC),
-		status:  "online",
-	}
-
-	postDetail(&firstUserPost)
-	statusDetail(userStatus)
-}
-
-func postDetail(model *Post) {
-	//fmt.Print(model)
-}
-
-func statusDetail(model Status) {
-	fmt.Print("This user was available at ", model.lastSee, " and current status is ", model.status)
+	userActions()
 }
