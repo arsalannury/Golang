@@ -1,11 +1,13 @@
 package main
 
-import "core/training"
+import "core/todo"
 
 func main() {
 
+	todo.TodoApplication()
+
 	//smallestMultiple.SmallestMultiple()
-	training.Training()
+
 	/*	var programSelected int
 
 		fmt.Println("Please select an algorithm")

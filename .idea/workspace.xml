@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c545de84-0659-4359-8925-84aff16f52c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/training/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/utils.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/training/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/index.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training/app.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training/user.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,7 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\GoLand 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;
   }
 }</component>
@@ -83,7 +86,8 @@
     <MESSAGE value="MultiplesThreeAndFive" />
     <MESSAGE value="LargestFactor" />
     <MESSAGE value="pointer" />
-    <option name="LAST_COMMIT_MESSAGE" value="pointer" />
+    <MESSAGE value="training struct" />
+    <option name="LAST_COMMIT_MESSAGE" value="training struct" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
