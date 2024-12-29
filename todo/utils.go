@@ -1,25 +1,32 @@
 package todo
 
 import (
+	"encoding/json"
 	"os"
 	"strings"
 	"time"
 )
 
-func writeFile(jasonString []byte) {
-	_, errReadFile := os.ReadFile("./todo/todo.json")
-	var osApproach int
+func writeFile(jsonString todo) {
+	dataReadFile, errReadFile := os.ReadFile("./todo/todo.json")
+	var todos []interface{}
 
-	if errReadFile != nil {
-		osApproach = os.O_CREATE
-	} else {
-		osApproach = os.O_APPEND
+	if errReadFile == nil {
+		if len(dataReadFile) > 0 {
+			errUnMarshal := json.Unmarshal(dataReadFile, &todos)
+			check(errUnMarshal)
+		}
+	} else if os.IsNotExist(errReadFile) {
+		os.Create("./todo/todo.json")
 	}
 
-	file, errWriteFile := os.OpenFile("./todo/todo.json", osApproach, 0644)
-	check(errWriteFile)
+	todos = append(todos, jsonString)
 
-	file.Write(jasonString)
+	unMarshalData, errUnMarshalData := json.MarshalIndent(todos, "", "     ")
+	check(errUnMarshalData)
+
+	errWriteFile := os.WriteFile("./todo/todo.json", unMarshalData, 0644)
+	check(errWriteFile)
 
 }
 
@@ -30,10 +37,10 @@ func check(e error) {
 }
 
 type todo struct {
-	Title     string
-	Content   string
-	State     string
-	CreatedAt time.Time
+	Title     string    `json:"title"`
+	Content   string    `json:"content"`
+	State     string    `json:"state"`
+	CreatedAt time.Time `json:"createdAt"`
 }
 
 func (t todo) New() todo {

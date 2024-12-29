@@ -1,7 +1,6 @@
 package todo
 
 import (
-	"encoding/json"
 	"fmt"
 	"strings"
 )
@@ -27,12 +26,12 @@ func TodoApplication() {
 		State:   state,
 	})
 
-	todoJasonByte, err := json.Marshal(newTodo)
+	//todoJasonByte, err := json.Marshal(newTodo)
 
-	check(err)
+	//check(err)
 
-	writeFile(todoJasonByte)
+	writeFile(newTodo)
 
-	fmt.Println("Todo added successfully and saved in Todo.txt file")
+	fmt.Println("Todo added successfully and saved in Todo.json file")
 
 }
