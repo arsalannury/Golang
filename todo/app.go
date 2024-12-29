@@ -6,32 +6,42 @@ import (
 )
 
 func TodoApplication() {
-	var title, content, state string
 
-	fmt.Println("Welcome to Todo Application")
-	fmt.Println("Please fill out related fields and we will save your todo in Todo.txt file.")
+	for {
+		var title, content, state, continu string
 
-	fmt.Print("Enter title:")
-	fmt.Scanln(&title)
+		fmt.Println("Welcome to Todo Application")
+		fmt.Println("Please fill out related fields and we will save your todo in Todo.txt file.")
 
-	fmt.Print("Enter content:")
-	fmt.Scanln(&content)
+		fmt.Print("Enter title:")
+		fmt.Scanln(&title)
 
-	fmt.Print("Enter state:")
-	fmt.Scanln(&state)
+		fmt.Print("Enter content:")
+		fmt.Scanln(&content)
 
-	var newTodo = todo.New(todo{
-		Title:   strings.ToUpper(title),
-		Content: strings.ToUpper(content),
-		State:   state,
-	})
+		fmt.Print("Enter state:")
+		fmt.Scanln(&state)
 
-	//todoJasonByte, err := json.Marshal(newTodo)
+		var newTodo = todo.New(todo{
+			Title:   strings.ToUpper(title),
+			Content: strings.ToUpper(content),
+			State:   state,
+		})
 
-	//check(err)
+		writeFile(newTodo)
 
-	writeFile(newTodo)
+		fmt.Println("Todo added successfully and saved in Todo.json file")
 
-	fmt.Println("Todo added successfully and saved in Todo.json file")
+		fmt.Println("Do you want add a new todo ? ")
+		fmt.Print("1: YES , 2: NO   Enter:")
+		fmt.Scanln(&continu)
+
+		if continu == "1" {
+			continue
+		} else {
+			break
+		}
+
+	}
 
 }
