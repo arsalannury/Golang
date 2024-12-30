@@ -1,31 +1,30 @@
 package smallestMultiple
 
-import (
-	"strings"
-)
+import "fmt"
 
 func SmallestMultiple() {
-	var nums [20]int = [20]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
-	var counter int = 1
-	var index int = 0
-	var passed []bool
+	nums := [20]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+	i := 2518
+	result := []int{}
 
-	for {
-		if len(passed) == len(nums) {
-			break
+	for true {
+		i = i + 2
+		for _, value := range nums {
+			var divided = i % value
+			fmt.Println(value, i, len(result), "value, i,len(result)")
+			if divided == 0 {
+				result = append(result, divided)
+			}
+
+			if value == len(nums) && len(result) < len(nums) {
+				result = []int{}
+			}
 		}
-
-		if index == len(nums) {
-			counter += 1
-			index = 0
-			passed = nil
+		//fmt.Println(len(result), len(nums), "result-nums")
+		if len(result) == len(nums) {
+			fmt.Println(i)
+			return
 		}
-
-		if !strings.Contains(string(rune(float64(counter/nums[index]))), ".") {
-			passed = append(passed, true)
-		}
-
-		index += 1
 	}
 
 }

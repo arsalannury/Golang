@@ -1,11 +1,9 @@
 package main
 
-import "core/todo"
+import "core/smallestMultiple"
 
 func main() {
-
-	todo.TodoApplication()
-
+	smallestMultiple.SmallestMultiple()
 	//smallestMultiple.SmallestMultiple()
 
 	/*	var programSelected int
