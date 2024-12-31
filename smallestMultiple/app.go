@@ -2,16 +2,16 @@ package smallestMultiple
 
 import "fmt"
 
-func SmallestMultiple() {
+func Run() {
 	nums := [20]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
-	i := 2518
+	i := 0
 	result := []int{}
 
 	for true {
-		i = i + 2
+		i += 1
 		for _, value := range nums {
 			var divided = i % value
-			fmt.Println(value, i, len(result), "value, i,len(result)")
+
 			if divided == 0 {
 				result = append(result, divided)
 			}
@@ -19,8 +19,8 @@ func SmallestMultiple() {
 			if value == len(nums) && len(result) < len(nums) {
 				result = []int{}
 			}
+
 		}
-		//fmt.Println(len(result), len(nums), "result-nums")
 		if len(result) == len(nums) {
 			fmt.Println(i)
 			return

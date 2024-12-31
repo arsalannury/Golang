@@ -3,7 +3,7 @@ package main
 import "core/smallestMultiple"
 
 func main() {
-	smallestMultiple.SmallestMultiple()
+	smallestMultiple.Run()
 	//smallestMultiple.SmallestMultiple()
 
 	/*	var programSelected int
