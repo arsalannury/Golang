@@ -1,11 +1,9 @@
 package main
 
-import "core/smallestMultiple"
+import "core/sumSquareDifference"
 
 func main() {
-	smallestMultiple.Run()
-	//smallestMultiple.SmallestMultiple()
-
+	sumSquareDifference.SumSquareDifference()
 	/*	var programSelected int
 
 		fmt.Println("Please select an algorithm")
