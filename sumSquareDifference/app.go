@@ -2,7 +2,6 @@ package sumSquareDifference
 
 import (
 	"errors"
-	"fmt"
 	"math"
 )
 
@@ -22,9 +21,7 @@ func SumSquareDifference() float64 {
 	var squareOfTheSum []int
 
 	for ind := 1; ind <= 100; ind++ {
-		fmt.Println(math.Pow(float64(ind), 2))
-		var iteratorPow int = int(math.Pow(float64(ind), 2))
-		squareToHundred = append(squareToHundred, iteratorPow)
+		squareToHundred = append(squareToHundred, int(math.Pow(float64(ind), 2)))
 		squareOfTheSum = append(squareOfTheSum, ind)
 	}
 
