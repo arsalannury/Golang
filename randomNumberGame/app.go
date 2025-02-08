@@ -2,25 +2,44 @@ package randomNumberGame
 
 import (
 	"bufio"
-	"errors"
 	"fmt"
+	"math/rand/v2"
 	"os"
+	"strconv"
+	"strings"
 )
 
-func Run() (string, error) {
-	const userInputMessage = "Hello and welcome to the RNG :)\nYou should guess what number will be print in the terminal between 1 and 10 \n"
-
+func Run() {
+	const userInputMessage = "Hello and welcome to the RNG :)\nYou should guess what number will be print in the terminal between 0 and 50 \n"
 	fmt.Print(userInputMessage)
 	fmt.Println("--------------------------------")
-	fmt.Print("Enter guess number: ")
+	fmt.Println("- Enter E for exit app -")
+	for {
+		fmt.Print("\n")
+		fmt.Print("Enter the number: ")
 
-	reader := bufio.NewReader(os.Stdin)
-	terminalData, err := reader.ReadString('\n')
-	//terminalData = strings.Replace(terminalData, "\n", "", -1)
+		reader := bufio.NewReader(os.Stdin)
+		terminalData, err := reader.ReadString('\n')
 
-	if err != nil {
-		return "", errors.New("")
+		var removeEnters = strings.Trim(terminalData, "\n")
+		var removeSpecialChars = strings.Trim(removeEnters, "\r")
+
+		if strings.EqualFold(removeSpecialChars, "e") {
+			break
+		}
+
+		if err != nil {
+			panic(err)
+		}
+
+		var randomNumber int = rand.IntN(50)
+		var result, _ = strconv.Atoi(removeSpecialChars)
+
+		if randomNumber == result {
+			fmt.Printf("Congratulations, You guessed the correct number %v", result)
+		} else {
+			fmt.Printf("Oh, You guessed the wrong number %v", result)
+		}
+
 	}
-
-	return terminalData, nil
 }

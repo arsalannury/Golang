@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c545de84-0659-4359-8925-84aff16f52c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/randomNumberGame/app.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/index.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/randomNumberGame/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/randomNumberGame/app.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,8 @@
     <MESSAGE value="pointer" />
     <MESSAGE value="training struct" />
     <MESSAGE value="smalletsMutiple" />
-    <option name="LAST_COMMIT_MESSAGE" value="smalletsMutiple" />
+    <MESSAGE value="RandomNumberGame start" />
+    <option name="LAST_COMMIT_MESSAGE" value="RandomNumberGame start" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
